@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECTRA | Coming Soon</title>
+    <style>
+        :root {
+            --primary: #1a3e72;
+            --secondary: #f8a51b;
+            --light: #f5f5f5;
+            --dark: #333;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .logo {
+            max-width: 300px; /* تم زيادة حجم الصورة */
+            height: auto;
+            margin-bottom: 3rem; /* زيادة المسافة بعد الصورة */
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .coming-soon {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        .contact {
+            margin-top: 3rem;
+            font-size: 1rem;
+        }
+        .email {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .email:hover {
+            color: var(--secondary);
+        }
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- نظام متعدد الصيغ مع WebP كأولوية -->
+        <picture>
+            <!-- الصيغة المفضلة (WebP) -->
+            <source srcset="sectra_logo_transparent_1.webp" type="image/webp">
+            <!-- النسخة الاحتياطية (PNG) -->
+            <source srcset="sectra_logo_transparent_1.png" type="image/png">
+
+            <!-- النسخة الاحتياطية النهائية مع صورة بديلة -->
+            <img src="sectra_logo_transparent_1.png" alt="SECTRA Logo" class="logo" 
+                 onerror="this.src='https://via.placeholder.com/300x150?text=SECTRA+Logo'">
+        </picture>
+
+        <div class="coming-soon">Our New Website Is Coming Soon</div>
+        <p>We're currently working on creating an amazing new online experience for our customers. Please check back soon for updates.</p>
+
+        <div class="contact">
+            For inquiries, contact us at: <br>
+            <a href="mailto:info@sectratrade.com" class="email">info@sectratrade.com</a>
+        </div>
+
+        <div class="copyright">
+            &copy; <script>document.write(new Date().getFullYear())</script> SECTRA. All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
